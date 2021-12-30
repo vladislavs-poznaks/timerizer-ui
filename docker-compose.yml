@@ -12,3 +12,12 @@ services:
       - .:/var/www/html
     networks:
       - stack
+  npx:
+    image: node:13.7
+    container_name: npx
+    working_dir: /var/www/html
+    entrypoint: ['npx']
+    volumes:
+      - .:/var/www/html
+    networks:
+      - stack
